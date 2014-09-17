@@ -1,0 +1,7 @@
+<fa-app ng-controller='MainController' id="app">
+    <fa-modifier fa-size="[200, 100]" fa-translate="[0, $index * 100, 0]" ng-repeat="item in list">
+        <fa-surface fa-background-color="item.bgColor" fa-color="'#fff'">
+            {{item.content}}
+        </fa-surface>
+    </fa-modifier>
+</fa-app>
