@@ -1,0 +1,9 @@
+<fa-app ng-controller='AnimationsController' id="animations-app">
+    <fa-grid-layout fa-options="myGridLayoutOptions">
+        <fa-modifier ng-repeat="item in list" fa-size="[100, 100]" fa-origin="[0.5, 0.5]" fa-align="[0.5, 0.5]" fa-rotate-z="item.rotate.get()">
+            <fa-surface fa-background-color="item.bgColor">
+                {{item.content}}
+            </fa-surface>
+        </fa-modifier>
+    </fa-grid-layout>
+</fa-app>

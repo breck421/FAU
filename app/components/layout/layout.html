@@ -1,4 +1,37 @@
-<fa-app ng-controller='LayoutController'>
+<!--
+<fa-app ng-controller='LayoutController' id="layout-app">
     <fa-grid-layout fa-options="myGridLayoutOptions">
+        <fa-modifier ng-repeat="item in list" fa-size="[100, 100]" fa-origin="[0.5, 0.5]" fa-align="[0.5, 0.5]">
+            <fa-surface fa-background-color="item.bgColor">
+                {{item.content}}
+            </fa-surface>
+        </fa-modifier>
     </fa-grid-layout>
+</fa-app>
+-->
+
+<fa-app ng-controller='LayoutController' id="layout-app">
+    <fa-header-footer-layout>
+
+        <fa-modifier fa-size="[undefined, 50]">
+            <fa-surface fa-background-color="'#dc322f'">
+                Header
+            </fa-surface>
+        </fa-modifier>
+
+        <fa-grid-layout fa-options="myGridLayoutOptions">
+            <fa-modifier ng-repeat="item in list">
+                <fa-surface fa-background-color="item.bgColor">
+                    {{item.content}}
+                </fa-surface>
+            </fa-modifier>
+        </fa-grid-layout>
+
+        <fa-modifier fa-size="[undefined, 75]">
+            <fa-surface fa-background-color="'#859900'">
+                Footer
+            </fa-surface>
+        </fa-modifier>
+
+    </fa-header-footer-layout>
 </fa-app>

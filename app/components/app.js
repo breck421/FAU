@@ -13,7 +13,7 @@ var FAU = angular.module('FAU', [
 FAU.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
-            url: '/',
+            url: '/home',
             templateUrl: 'components/main/main.html',
             controller: 'MainController'
         })
@@ -21,7 +21,12 @@ FAU.config(function($stateProvider, $urlRouterProvider) {
             url: '/layout',
             templateUrl: 'components/layout/layout.html',
             controller: 'LayoutController'
+        })
+        .state('animations', {
+            url: '/animations',
+            templateUrl: 'components/animations/animations.html',
+            controller: 'AnimationsController'
         });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
 });
